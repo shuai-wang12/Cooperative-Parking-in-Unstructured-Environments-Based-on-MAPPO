@@ -8,3 +8,4 @@
 面向多车强交互场景，设计基于 MAPPO（CTDE）的协同决策框架，并通过 VecNormalize、正交初始化、学习率衰减等手段提升训练稳定性。
 
 还有一些减少碰撞，减少超时的操作方法，如安全护盾，贝塞尔曲线规划等。
+<img src=multi_eval_3_episodes.gif>
