@@ -1,2 +1,6 @@
 # Cooperative-Parking-in-Unstructured-Environments-Based-on-MAPPO
-Cooperative Parking in Unstructured Environments Based on MAPPO
+此项目为非结构化环境下的协同泊车，基于多智能体强化学习算法。
+基于 Gymnasium 搭建含 LiDAR 感知的多车协同倒车仿真环境，设计“前进对位-确定性倒车-出场”三阶段任务流程与多进程并行训练框架，完成环境建模、策略训练与可视化评估闭环。
+其中将泊车过程独立出来，单独作为一个阶段，此阶段并不使用任何的RL算法控制，而采用固定的路线作为泊车路线。这种多阶段的解耦方法，使得RL的神经网络学习难度大大下降，同时也确保了倒车换向点的可行区间位于可控区域内。
+面向多车强交互场景，设计基于 MAPPO（CTDE）的协同决策框架，并通过 VecNormalize、正交初始化、学习率衰减等手段提升训练稳定性。
+还有一些减少碰撞，减少超时的操作方法，如安全护盾，贝塞尔曲线规划等。
